@@ -1,0 +1,54 @@
+Command Line: /usr/synopsys/verdi/T-2022.06-SP2/platform/LINUXAMD64/bin/Novas -ssf waves.fsdb
+uname(Linux synopsys.stbzu.edu 3.10.0-1160.83.1.el7.x86_64 #1 SMP Mon Dec 19 10:44:06 UTC 2022 x86_64)
+type= DS_SIGNAL element= 12 field= 2
+VERILOG tb_my_mem
+VERILOG clk
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG write
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG read
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG data_in[7:0]
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG address[15:0]
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG data_out[8:0]
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG address_array[0:0]
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG data_to_write_array[0:0]
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG data_read_expect_assoc[8:0]
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG data_read_queue[8:0]
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG error_count[31:0]
+-----
+second field= signal
+VERILOG tb_my_mem
+VERILOG i[31:0]
+-----
+second field= signal
+type= DS_STRING
+clk write read data_in[7:0] address[15:0] data_out[8:0] address_array[0:0] data_to_write_array[0:0] data_read_expect_assoc[8:0] data_read_queue[8:0] error_count[31:0] i[31:0]
+au time 468.965539 11.218074 5.505718 delta 310128640 310128640 total 858796032 858796032

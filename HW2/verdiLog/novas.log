@@ -1,0 +1,32 @@
+Verdi (R)
+
+Release Verdi_T-2022.06-SP2 for (RH Linux x86_64/64bit) -- Tue Nov 22 02:43:12 PDT 2022
+
+Copyright (c) 1999 - 2022 Synopsys, Inc.
+This software and the associated documentation are proprietary to Synopsys, Inc. 
+This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc. 
+All other use, reproduction, or distribution of this software is strictly prohibited.
+
+
+Total number of converted HDL2CELL cells=0 (normal modules=0)
+[Symbol Library from default setting]
+  library Path = /usr/synopsys/verdi/T-2022.06-SP2/share/symlib/64
+  library Name = default_u
+[Symbol Library from manual setting]
+  There are 0 library path(s) and 0 library name(s):
+
+
+Inferring module tb_my_mem, file ./verif/tb_my_mem.sv, line 1~145 (Verilog)
+
+Warning!(BA-69) "./verif/tb_my_mem.sv", Line: 59~62
+The iteration number of 'loop' exceeds the maximum number: 0.
+Warning!(BA-69) "./verif/tb_my_mem.sv", Line: 68~84
+The iteration number of 'loop' exceeds the maximum number: 0.
+Warning!(BA-38) "./verif/tb_my_mem.sv", Line: 21~21
+'always' statement is inferred as a black box because of no sensitivity list.
+
+Module tb_my_mem, File ./verif/tb_my_mem.sv, Line 1~145, Total error(s) 0, warning(s) 8
+
+
+Verdi design analysis: total error(s) 0, total warning(s) 8.
+---- Any errors/warnings, please refer to file /home/st4/HW2/verdiLog/novas.log -----------------------

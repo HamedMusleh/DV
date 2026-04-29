@@ -1,0 +1,44 @@
+Command: /home/st4/HW2/./simv -l run.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Apr 11 21:56 2026
+*Verdi* Loading libsscore_vcs202206.so
+FSDB Dumper for VCS, Release Verdi_T-2022.06-SP2, Linux x86_64/64bit, 11/22/2022
+(C) 1996 - 2022 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'waves.fsdb'
+*Verdi* : Begin traversing the scope (tb_my_mem), layer (0).
+*Verdi* : End of traversing.
+
+===== WRITE PHASE =====
+WRITE[0]: addr=0x0f21  data_in=0xb7  expected=0x0b7
+WRITE[1]: addr=0xf6d8  data_in=0x4f  expected=0x14f
+WRITE[2]: addr=0xc4bb  data_in=0x18  expected=0x018
+WRITE[3]: addr=0x0f46  data_in=0x8d  expected=0x08d
+WRITE[4]: addr=0x0b1f  data_in=0xf8  expected=0x1f8
+WRITE[5]: addr=0x2013  data_in=0xa9  expected=0x0a9
+
+===== READ PHASE (reverse order) =====
+READ [5]: addr=0x2013  data_out=0x0a9  [PASS]
+READ [4]: addr=0x0b1f  data_out=0x1f8  [PASS]
+READ [3]: addr=0x0f46  data_out=0x08d  [PASS]
+READ [2]: addr=0xc4bb  data_out=0x018  [PASS]
+READ [1]: addr=0xf6d8  data_out=0x14f  [PASS]
+READ [0]: addr=0x0f21  data_out=0x0b7  [PASS]
+
+===== data_read_queue contents =====
+  data_read_queue[0] = 0x0a9
+  data_read_queue[1] = 0x1f8
+  data_read_queue[2] = 0x08d
+  data_read_queue[3] = 0x018
+  data_read_queue[4] = 0x14f
+  data_read_queue[5] = 0x0b7
+
+===== RESULT =====
+Error count = 0
+ALL TESTS PASSED
+$finish called from file "./verif/tb_my_mem.sv", line 135.
+$finish at simulation time                  200
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 200
+CPU Time:      0.370 seconds;       Data structure size:   0.0Mb
+Sat Apr 11 21:56:32 2026

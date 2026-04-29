@@ -1,0 +1,111 @@
+simSetSimulator "-vcssv" -exec "/home/st4/HW3/simv" -args
+debImport "-dbdir" "/home/st4/HW3/simv.daidir"
+debLoadSimResult /home/st4/HW3/waves.fsdb
+wvCreateWindow
+verdiWindowResize -win $_Verdi_1 "8" "31" "879" "782"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcSignalView -off
+srcHBSelect "adder_tb.dut" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcSignalView -on
+verdiSetActWin -dock widgetDock_<Signal_List>
+srcSignalViewSelect "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.expected\[31:0\]" "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.errors\[31:0\]" "adder_tb.expected\[31:0\]" \
+           "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.b\[31:0\]" "adder_tb.errors\[31:0\]" \
+           "adder_tb.expected\[31:0\]" "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.a\[31:0\]" "adder_tb.b\[31:0\]" \
+           "adder_tb.errors\[31:0\]" "adder_tb.expected\[31:0\]" \
+           "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.i\[31:0\]" "adder_tb.a\[31:0\]" \
+           "adder_tb.b\[31:0\]" "adder_tb.errors\[31:0\]" \
+           "adder_tb.expected\[31:0\]" "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.out_q" "adder_tb.i\[31:0\]" "adder_tb.a\[31:0\]" \
+           "adder_tb.b\[31:0\]" "adder_tb.errors\[31:0\]" \
+           "adder_tb.expected\[31:0\]" "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.expected_q" "adder_tb.out_q" "adder_tb.i\[31:0\]" \
+           "adder_tb.a\[31:0\]" "adder_tb.b\[31:0\]" "adder_tb.errors\[31:0\]" \
+           "adder_tb.expected\[31:0\]" "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.in_q2" "adder_tb.expected_q" "adder_tb.out_q" \
+           "adder_tb.i\[31:0\]" "adder_tb.a\[31:0\]" "adder_tb.b\[31:0\]" \
+           "adder_tb.errors\[31:0\]" "adder_tb.expected\[31:0\]" \
+           "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.in_q1" "adder_tb.in_q2" "adder_tb.expected_q" \
+           "adder_tb.out_q" "adder_tb.i\[31:0\]" "adder_tb.a\[31:0\]" \
+           "adder_tb.b\[31:0\]" "adder_tb.errors\[31:0\]" \
+           "adder_tb.expected\[31:0\]" "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.sum\[8:0\]" "adder_tb.in_q1" "adder_tb.in_q2" \
+           "adder_tb.expected_q" "adder_tb.out_q" "adder_tb.i\[31:0\]" \
+           "adder_tb.a\[31:0\]" "adder_tb.b\[31:0\]" "adder_tb.errors\[31:0\]" \
+           "adder_tb.expected\[31:0\]" "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.in2\[7:0\]" "adder_tb.sum\[8:0\]" "adder_tb.in_q1" \
+           "adder_tb.in_q2" "adder_tb.expected_q" "adder_tb.out_q" \
+           "adder_tb.i\[31:0\]" "adder_tb.a\[31:0\]" "adder_tb.b\[31:0\]" \
+           "adder_tb.errors\[31:0\]" "adder_tb.expected\[31:0\]" \
+           "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.reset" "adder_tb.in1\[7:0\]" "adder_tb.in2\[7:0\]" \
+           "adder_tb.sum\[8:0\]" "adder_tb.in_q1" "adder_tb.in_q2" \
+           "adder_tb.expected_q" "adder_tb.out_q" "adder_tb.i\[31:0\]" \
+           "adder_tb.a\[31:0\]" "adder_tb.b\[31:0\]" "adder_tb.errors\[31:0\]" \
+           "adder_tb.expected\[31:0\]" "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.clk" "adder_tb.reset" "adder_tb.in1\[7:0\]" \
+           "adder_tb.in2\[7:0\]" "adder_tb.sum\[8:0\]" "adder_tb.in_q1" \
+           "adder_tb.in_q2" "adder_tb.expected_q" "adder_tb.out_q" \
+           "adder_tb.i\[31:0\]" "adder_tb.a\[31:0\]" "adder_tb.b\[31:0\]" \
+           "adder_tb.errors\[31:0\]" "adder_tb.expected\[31:0\]" \
+           "adder_tb.actual\[31:0\]"
+srcSignalViewSelect "adder_tb.WIDTH" "adder_tb.clk" "adder_tb.reset" \
+           "adder_tb.in1\[7:0\]" "adder_tb.in2\[7:0\]" "adder_tb.sum\[8:0\]" \
+           "adder_tb.in_q1" "adder_tb.in_q2" "adder_tb.expected_q" \
+           "adder_tb.out_q" "adder_tb.i\[31:0\]" "adder_tb.a\[31:0\]" \
+           "adder_tb.b\[31:0\]" "adder_tb.errors\[31:0\]" \
+           "adder_tb.expected\[31:0\]" "adder_tb.actual\[31:0\]"
+srcSignalViewAddSelectedToWave -win $_nTrace1 -clipboard
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+verdiSetActWin -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+srcSignalViewSelect "adder_tb.in1\[7:0\]"
+verdiSetActWin -dock widgetDock_<Signal_List>
+debExit
